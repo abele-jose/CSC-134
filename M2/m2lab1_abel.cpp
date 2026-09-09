@@ -44,8 +44,6 @@ int main() {
     cout << "You have ordered " << purchase_count << " " << product_name << "(s)." << endl;
     cout << "Total price: $" << purchase_total << endl;
     cout << "Thank you for shopping with CSC 134." << endl << endl;
-    
-
 
     return 0; // no errors
 }
