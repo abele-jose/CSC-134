@@ -1,49 +1,54 @@
-// CSC 134
-// M2LAB1 - Product Sales
-// Jose, A
-// 9/9/26
-// Interactive program with input
-
-
+/*
+CSC 134
+M2LAB1 - Crates
+josea
+9/16/26
+Exercise 3.11 from Gaddis
+*/
 #include <iostream>
+#include <iomanip>
 using namespace std;
 
 int main() {
-    // SET UP VARIABLES
-    string product_name;
-    int    product_count;
-    double product_price; // $ USD, per item
-    // variable for customer side
-    int    purchase_count;
-    double purchase_total;
 
-    // GET INPUT - set up store
-    cout << "STORE SETUP" << endl;
-    cout << "Product Name: ";
-    cin  >> product_name;
-    cout << "Item Count:  ";
-    cin >> product_count;
-    cout << "Price Each:  $";
-    cin >> product_price;
+    // Declare constants and variables
+    // These are constant and never change unless we change the program
+    const double COST_PER_CUBIC_FOOT = 0.23;     //(Material & fabrication cost per cu ft)
+    const double CHARGE_PER_CUBIC_FOOT = 0.50;   // (Billed invoice amount per cu ft)
+    // Varables describing the crate
+    double length, width, height;                // you can declare mutiple of the same type at once
+    double volume;                               // V = 1 * w * h, in cubic ft
+    double crate_cost;                           // price to make the crate, USD
+    double crate_charge;                         // price we sell it for, USD
+    double profit;                               // charge - cost
 
-    // GET INPUT - Greet user, get their order
-    cout << "-------------------------------" << endl << endl;
-    cout << "WELCOME, CUSTOMER." << endl;
-    cout << "Welcome to the " << product_name << " shop." << endl;
-    cout << "Our " << product_name << "(s) are $" << product_price << " each." << endl;
+    // Get the dimensions of the crate
+    cout << "Please enter the crate dimensions." << endl;
+    cout << "Crate length: ";
+    cin  >> length;
+    cout << "Crate width:  ";
+    cin  >> width;
+    cout << "Crate height: ";
+    cin  >> height;
 
-    cout << "How many would you like to buy today? ";
-    cin >> purchase_count; 
+    // Calculate the volume (eerything else depends on this value)
+    volume = length * width * height;          // cubic feet
 
-    // DO THE PROCESSING
-    // Note: we dont verify the user input -- they can buy more than we have , or a negative amount
-    // This will be fixed in the loops module
-    purchase_total = purchase_count * product_price;
+    // Calculate price and cost
+    crate_cost = COST_PER_CUBIC_FOOT * volume;
+    crate_charge = CHARGE_PER_CUBIC_FOOT * volume;
 
-    // PRINT OUTPUT
-    cout << "You have ordered " << purchase_count << " " << product_name << "(s)." << endl;
-    cout << "Total price: $" << purchase_total << endl;
-    cout << "Thank you for shopping with CSC 134." << endl << endl;
+    // Calculate profit (price - cost)
+    profit = crate_charge - crate_cost; // What they pay us, minus what we sepnt
+
+    // Display results to user
+    cout << setprecision(2) << fixed;   // 2 decimals for all values
+    cout << "A crate measuring " << length << " x " << width << " x " << height << " ft." << endl;
+    cout << "Is volume: " << volume << " cubic ft." << endl;
+    cout << endl;
+    cout << "Cost to build: $" << crate_cost << endl;
+    cout << "Sells for:     $" << crate_charge << endl;
+    cout << "Profit:        $" << profit << endl;
 
     return 0; // no errors
 }
