@@ -25,17 +25,70 @@ void question4();
 int main() {
     // Run only the questions you finish by removing the //
     //question1();
-    //question2();
+    question2();
     //question3();
     //question4();
 }
 
 void question1() {
-    cout << "Question 1 goes here" << endl;
+    string name;
+    double starting_account_balance;
+    double deposit_amount;
+    double withdrawl;
+    double final_account_balance;
+    int account_number = 1738679;
+
+    cout << "Name?: ";
+    cin >> name;
+
+    cout << "Starting account balance?: $";
+    cin >> starting_account_balance;
+
+    cout << "Deposit amount: $";
+    cin >> deposit_amount;
+
+    cout << "Withdrawl amount?: $";
+    cin >> withdrawl;
+
+    final_account_balance = starting_account_balance + deposit_amount - withdrawl;
+
+    cout << "Account name: " << name << endl;
+    cout << "Account number: " << account_number << endl;
+    cout << "Final account balance: $" << final_account_balance << endl;
 }
 
 void question2() {
-    cout << "Question 2 goes here" << endl;
+    const double COST_PER_CUBIC_FOOT = 0.30;    
+    const double CHARGE_PER_CUBIC_FOOT = 0.52;  
+
+    double length, width, height;                
+    double volume;                               
+    double crate_cost;                           
+    double crate_charge;                         
+    double profit;                               
+
+    cout << "Please enter the crate dimensions." << endl;
+    cout << "Crate length: ";
+    cin  >> length;
+    cout << "Crate width:  ";
+    cin  >> width;
+    cout << "Crate height: ";
+    cin  >> height;
+
+    volume = length * width * height; 
+
+    crate_cost = COST_PER_CUBIC_FOOT * volume;
+    crate_charge = CHARGE_PER_CUBIC_FOOT * volume;
+
+    profit = crate_charge - crate_cost; 
+
+    cout << setprecision(2) << fixed;
+    cout << "A crate measuring " << length << " x " << width << " x " << height << " ft." << endl;
+    cout << "Is volume: " << volume << " cubic ft." << endl;
+    cout << endl;
+    cout << "Cost to build: $" << crate_cost << endl;
+    cout << "Sells for:     $" << crate_charge << endl;
+    cout << "Profit:        $" << profit << endl;
 }
 
 void question3() {
