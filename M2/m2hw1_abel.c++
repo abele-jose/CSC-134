@@ -25,9 +25,9 @@ void question4();
 int main() {
     // Run only the questions you finish by removing the //
     //question1();
-    question2();
+    //question2();
     //question3();
-    //question4();
+    question4();
 }
 
 void question1() {
@@ -92,9 +92,37 @@ void question2() {
 }
 
 void question3() {
-    cout << "Question 3 goes here" << endl;
+    int pizzas;
+    int slices_per_pizza;
+    int visitors;
+    int leftover_pizza;
+    int eaten_slices;
+    int slices_left;
+
+    cout << "How many pizzas did you order? ";
+    cin >> pizzas;
+
+    cout << "How many slices per pizza? ";
+    cin >> slices_per_pizza;
+
+    cout << "How many visitors are coming? ";
+    cin >> visitors;
+
+    leftover_pizza = pizzas * slices_per_pizza;
+
+    eaten_slices = visitors & 3;
+
+    slices_left = leftover_pizza - eaten_slices;
+
+    cout << "Pieces of pizza left over: " << slices_left << endl;
 }
 
 void question4() {
-    cout << "Question 4 goes here" << endl;
+    string school = "FTCC";
+    string team = "TROJANS";
+
+    cout << "LET'S GO " << school << endl;
+    cout << "LET'S GO " << school << endl;
+    cout << "LET'S GO " << school << endl;
+    cout << "LET'S GO " << team << endl;
 }
