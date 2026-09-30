@@ -120,9 +120,10 @@ void question3() {
 void question4() {
     string school = "FTCC";
     string team = "TROJANS";
+    string chant = "LET'S GO ";
 
-    cout << "LET'S GO " << school << endl;
-    cout << "LET'S GO " << school << endl;
-    cout << "LET'S GO " << school << endl;
-    cout << "LET'S GO " << team << endl;
+    cout << chant << school << endl;
+    cout << chant << school << endl;
+    cout << chant << school << endl;
+    cout << chant << team << endl;
 }
