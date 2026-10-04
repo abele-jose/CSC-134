@@ -8,6 +8,7 @@ using namespace std;
 
 void option1();
 void option2();
+void option3();
 
 // beginning of the main() method
 int main() {
@@ -15,9 +16,10 @@ int main() {
   int choice; 
 
   // ask the question
-  cout << "Do you drop out or keep going to college?" << endl;
-  cout << "1. Drop out" << endl;
-  cout << "2. Keep going" << endl; 
+  cout << "Which box has a million dollars?" << endl;
+  cout << "1. Box 1" << endl;
+  cout << "2. Box 2" << endl; 
+  cout << "3. Box 3" << endl;
   cout << "? ";
   cin >> choice;
 
@@ -28,6 +30,9 @@ int main() {
   else if (2 == choice) {
     option2();
   }
+  else if (3 == choice) {
+    option3();
+  }
   else {
     cout << "I'm sorry, that is not a valid choice." << endl;
   }
@@ -37,37 +42,15 @@ int main() {
 } 
 
 void option1() {
-    cout << "You chose Option 1" << endl;
-    cout << "You are now a college dropout." << endl;
-    int main() [
-        
-        int choice2;
-
-        cout << "Do you get a job or become an influencer?" << endl;
-        cout << "3. Get a job" << endl;
-        cout << "4. Become an influencer" << endl;
-        cin >> choice2;
-
-        void job1();
-        void job2();
-
-        if (3 == choice2) {
-        job1();
-    }
-    else if (4 == choice2) {
-        job2();
-    }
-    else {
-        cout << "I'm sorry, that is not a valid choice." << endl;
-     }
-
-    cout << "Thank you for playing!" << endl;
-    return 0; 
-    ]
-
+    cout << "You chose Box 1" << endl;
+    cout << "You win a new toaster! No money for you!" << endl;
 }
 
 void option2() {
-    cout << "You chose Option 2" << endl;
-    cout << "You end up successful in life. Conrats!" << endl;
+    cout << "You chose Box 2" << endl;
+    cout << "You win a $1,000,000! Congradulations!" << endl;
+}
+void option3(){
+  cout << "You chose Box 3" << endl;
+  cout << "You win nothing. Sorry!" << endl;
 }
