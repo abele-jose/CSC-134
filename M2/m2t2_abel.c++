@@ -38,7 +38,7 @@ int main () {
     // requires up top this line: #include <iomanip>
     cout << setprecision(2) << fixed;
     cout << setw(20) << meal_name << setw(10) <<  meal_price << endl;
-    cout << setw(20) << " tax: " << setw(10) << tax_amount << endl;
+    cout << setw(20) << " Tax: " << setw(10) << tax_amount << endl;
     cout << line << endl;
     cout << setw(20) << "Total: " << setw(10) << total << endl;
     cout << "Thank You Come Again" << endl << endl;
