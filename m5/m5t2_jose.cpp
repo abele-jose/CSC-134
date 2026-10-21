@@ -18,7 +18,7 @@ int main() {
     cout << "Table of Squares Program" << endl;
     
     for (int i = 1; i <= 10; i++) {
-        int squared = square(i);
+        int squared = i*i;
         printAnswerLine(i, squared);
     }
 
@@ -31,8 +31,5 @@ int square(int num) {
 }
 
 void printAnswerLine(int number, int squared) {
-    // Print one line of the table of squares.
-    // example output:
-    // 3    9
     cout << number << " squared is " << squared << endl;
 }
